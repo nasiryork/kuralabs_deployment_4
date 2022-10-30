@@ -19,7 +19,7 @@ Terraform, VPC, EC2, Jenkins, GitHub, Nginx, Gunicorn, and Slack
 
 ## Jenkins Pipeline 1:
 - The first pipeline that I set up was just to test if the application would deploy to an EC2 instance made from the terraform file. After fixing some configuration errors the application was deployed in the EC2.
-
+![image](https://github.com/nasiryork/kuralabs_deployment_4/blob/main/static/First%20Pipeline.png)
 - After the application was deployed I added a destroy stage to teardown the previous infrastructure. 
 ```
 stage('Destroy') {
@@ -37,12 +37,12 @@ stage('Destroy') {
 
 ## Jenkins Pipeline 2:
 - With the VPC added I was able to rebuild the pipeline. After fixing a few problems along the way I was able to get my application running within an architecture created entirely by Terraform.
-
+![image](https://github.com/nasiryork/kuralabs_deployment_4/blob/main/static/D4%20Full%20Pipeline.png)
 ## Slack:
 - I once again added the Slack Notification Plugin to my pipeline to inform me of the status of any future builds.
 
 ## Diagram:
-
+![image](https://github.com/nasiryork/kuralabs_deployment_4/blob/main/Documentation/Deployment%204%20Diagram.drawio.png)
 ## Challenges:
 - During this deployment I ran into 2 challenges that I needed to solve. 
 - The First Challenge occurred when I was trying to add the Destroy Stage to my Jenkins pipeline.
